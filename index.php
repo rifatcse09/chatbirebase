@@ -79,16 +79,19 @@
    $update = 'PATCH';
    $show = 'GET';
    
-   //   $chatRoomData =[
-//       'id' => 1,
-//       'teacher_id'=>2,
-//       'guardian_id'=>1,
-//       'security_token'=> 'jfVAO2pTtMy',
-//       'created' => '1505982398',
-//       'updated' => '',
-//       'deleted' => '0',
-//       'tech_guar' =>'2_1'
-//];
+      $chatMessageData =[
+       'id' => 1,
+       'chat_room_id'=>3,
+	   'teacher_id'=>2,
+       'guardian_id'=>'',
+	   'absence_id'=>'',
+	   'arrival_id'=>'',
+	   'message'=>'hi how are you',
+	   'photo' => '',
+       'created' => '1505982850',
+       'updated' => '',
+       'deleted' => '0',
+];
    
    //for chat room
 //   $chatRoomData =[
@@ -114,10 +117,10 @@
 //       ];
    
    
-   $json = json_encode( $chatRoomData );
+   $json = json_encode( $chatMessageData );
   
     //for user entry $url = "https://chatfirebase-b784b.firebaseio.com/users/3.json";
-    $url = "https://chatfirebase-b784b.firebaseio.com/chat_room/1.json";
+    $url = "https://chatfirebase-b784b.firebaseio.com/chat_room_messages/1.json";
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);                               
     curl_setopt($ch, CURLOPT_HEADER, false);                               
